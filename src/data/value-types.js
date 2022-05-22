@@ -52,6 +52,9 @@ export const
 			name: "(elem)",
 		},
 		{
+			name: "(depth)",
+		},
+		{
 			name: "(element, ...)",
 		},
 		{
