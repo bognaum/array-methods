@@ -131,15 +131,6 @@ export const
 			].join("\n"),
 		},
 		{
-			name: "(v, i, a) => i",
-			descr: [
-				"v - value",
-				"i - index",
-				"a - array",
-				"returns index or -1",
-			].join("\n"),
-		},
-		{
 			name: "(v, i, a) => true/false",
 			descr: [
 				"v - value",

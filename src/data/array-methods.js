@@ -158,7 +158,7 @@ export default [
 		descr: "Returns the first index of given element or -1.",
 		args        : getArrElem(args        , "(elem, fromIndex)"),
 		returned    : getArrElem(returned    , "index"),
-		callback    : getArrElem(callback    , "(v, i, a) => i"),
+		callback    : getArrElem(callback    , "none"),
 		arrChanges  : getArrElem(arrChanges  , "not-changed"),
 		iterFullness: getArrElem(iterFullness, "not-full"),
 	},
