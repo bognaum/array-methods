@@ -30,7 +30,7 @@ export default [
 	{
 		name: "concat",
 		descr: "Returns new concatenated array from several given arrays.",
-		args        : getArrElem(args        , "([], [], ...)"),
+		args        : getArrElem(args        , "(arr1, arr2, ...)"),
 		returned    : getArrElem(returned    , "array"),
 		callback    : getArrElem(callback    , "none"),
 		arrChanges  : getArrElem(arrChanges  , "not-changed"),
@@ -66,7 +66,7 @@ export default [
 	{
 		name: "fill",
 		descr: "Fills all or set elements with the set value.",
-		args        : getArrElem(args        , "(elem, iA, iB)"),
+		args        : getArrElem(args        , "(v, iA, iB)"),
 		returned    : getArrElem(returned    , "array"),
 		callback    : getArrElem(callback    , "none"),
 		arrChanges  : getArrElem(arrChanges  , "changed"),

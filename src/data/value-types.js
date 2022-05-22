@@ -44,51 +44,67 @@ export const
 	args = [
 		{
 			name: "()",
+			descr: "no argumebts",
 		},
 		{
 			name: "(i)",
+			descr: "index",
 		},
 		{
 			name: "(elem)",
+			descr: "element of array",
 		},
 		{
 			name: "(depth)",
+			descr: "depth",
 		},
 		{
 			name: "(element, ...)",
+			descr: "one or many elements",
 		},
 		{
-			name: "(elem, iA, iB)",
+			name: "(v, iA, iB)",
+			descr: "v - filling value \niA - from index \niB - to index",
 		},
 		{
 			name: "(iTarget, iA, iB)",
+			descr: "iTarget - index of target element \niA - from index \niB - to index",
 		},
 		{
 			name: "(beginIndex, endIndex)",
+			descr: "beginIndex - index of begin \nendIndex - index of end",
 		},
 		{
 			name: "(elem, fromIndex)",
+			descr: "elem - value of element \nfromIndex - check from this index",
 		},
 		{
 			name: "(string)",
+			descr: "ctring",
 		},
 		{
 			name: "(callb)",
+			descr: "callback",
 		},
 		{
 			name: "(callb, thisArg)",
+			descr: "callb - callback \nthisArg - value of 'this' (optional)",
 		},
 		{
 			name: "(callb, accum)",
+			descr: "callb - callback \naccum - accumulator - initial value to first call of callback",
 		},
 		{
-			name: "([], [], ...)",
+			name: "(arr1, arr2, ...)",
+			descr: "two or many arrays",
 		},
 		{
 			name: "(begin, delCount, ...)",
+			descr: "begin - index of begin \ndelCount - how many elements",
 		},
 		{
 			name: "(locales, options)",
+			descr: "",
 		},
 	],
 	callback = [
