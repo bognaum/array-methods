@@ -1,6 +1,6 @@
-// import logo from './logo.svg';
 import './App.css';
-import './code.css';
+// import './code.css';
+import './scss/code.scss';
 import FilteredList from './FilteredList';
 
 import arrMethods from "./data/array-methods";
