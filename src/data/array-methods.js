@@ -282,7 +282,7 @@ export default [
 	{
 		name: "splice",
 		descr: "Returns array of deleted elements from given position, and added to this position other given elements.",
-		args        : getArrElem(args        , "(begin, delCount, ...)"),
+		args        : getArrElem(args        , "(begin, delCount, added1, ...)"),
 		returned    : getArrElem(returned    , "array"),
 		callback    : getArrElem(callback    , "none"),
 		arrChanges  : getArrElem(arrChanges  , "changed"),

@@ -99,8 +99,8 @@ export const
 			descr: "two or many arrays",
 		},
 		{
-			name: "(begin, delCount, ...)",
-			descr: "begin - index of begin \ndelCount - how many elements",
+			name: "(begin, delCount, added1, ...)",
+			descr: "begin - index of begin \ndelCount - how many elements \n added1 - added element",
 		},
 		{
 			name: "(locales, options)",
