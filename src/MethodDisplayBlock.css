@@ -11,6 +11,9 @@
 .method-display-block table {
 	width: 100%;
 }
+.method-display-block table tr td {
+	width: 25%;
+}
 .method-display-block__prop-name {
 	font-style: italic;
 }
@@ -20,5 +23,3 @@
 	color: #0a8;
 	font-family: consolas,  monospace;
 }
-.method-display-block__title {}
-.method-display-block__description {}

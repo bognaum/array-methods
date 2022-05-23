@@ -10,7 +10,12 @@ export default function MethodDisplayBlock(props) {
 		<div className="method-display-block">
 			<div className="method-display-block__title">
 				<code>
-					.<span className="method-display-block__m-name">{mOb.name}</span>
+					{
+						(mOb.name[0] === "[") ?
+							<span className="method-display-block__m-name">{mOb.name}</span>
+						:
+							<span className="method-display-block__m-name">.{mOb.name}</span>
+					}
 					{" "}
 					<span
 					  className="method-display-block__args"
