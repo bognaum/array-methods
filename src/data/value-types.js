@@ -5,6 +5,14 @@ export const
 			descr: "Returns array"
 		},
 		{
+			name: "iterator",
+			descr: "Returns iterator"
+		},
+		{
+			name: "length",
+			descr: "Returns length"
+		},
+		{
 			name: "element",
 			descr: "Returns element"
 		},
@@ -13,24 +21,16 @@ export const
 			descr: "Returns index"
 		},
 		{
-			name: "string",
-			descr: "Returns string"
-		},
-		{
 			name: "hash",
 			descr: "Returns hash"
 		},
 		{
-			name: "iterator",
-			descr: "Returns iterator"
+			name: "string",
+			descr: "Returns string"
 		},
 		{
 			name: "boolean",
 			descr: "Returns boolean"
-		},
-		{
-			name: "length",
-			descr: "Returns length"
 		},
 		{
 			name: "undefined",
@@ -51,16 +51,20 @@ export const
 			descr: "index",
 		},
 		{
-			name: "(elem)",
-			descr: "element of array",
-		},
-		{
 			name: "(depth)",
 			descr: "depth",
 		},
 		{
+			name: "(string)",
+			descr: "string",
+		},
+		{
 			name: "(element, ...)",
 			descr: "one or many elements",
+		},
+		{
+			name: "(element, fromIndex)",
+			descr: "elem - value of element \nfromIndex - check from this index",
 		},
 		{
 			name: "(v, iA, iB)",
@@ -73,14 +77,6 @@ export const
 		{
 			name: "(beginIndex, endIndex)",
 			descr: "beginIndex - index of begin \nendIndex - index of end",
-		},
-		{
-			name: "(elem, fromIndex)",
-			descr: "elem - value of element \nfromIndex - check from this index",
-		},
-		{
-			name: "(string)",
-			descr: "ctring",
 		},
 		{
 			name: "(callb)",
@@ -108,10 +104,6 @@ export const
 		},
 	],
 	callback = [
-		{
-			name: "none",
-			descr: "No callback",
-		},
 		{
 			name: "(v, i, a) => undefined",
 			descr: [
@@ -156,6 +148,10 @@ export const
 				"b - compared value",
 				"returns compare result (-1|0|1)",
 			].join("\n"),
+		},
+		{
+			name: "none",
+			descr: "No callback",
 		},
 	],
 	arrChanges = [

@@ -147,7 +147,7 @@ export default [
 	{
 		name: "includes",
 		descr: "Returns boolean sign of including given element in array.",
-		args        : getArrElem(args        , "(elem, fromIndex)"),
+		args        : getArrElem(args        , "(element, fromIndex)"),
 		returned    : getArrElem(returned    , "boolean"),
 		callback    : getArrElem(callback    , "none"),
 		arrChanges  : getArrElem(arrChanges  , "not-changed"),
@@ -156,7 +156,7 @@ export default [
 	{
 		name: "indexOf",
 		descr: "Returns the first index of given element or -1.",
-		args        : getArrElem(args        , "(elem, fromIndex)"),
+		args        : getArrElem(args        , "(element, fromIndex)"),
 		returned    : getArrElem(returned    , "index"),
 		callback    : getArrElem(callback    , "none"),
 		arrChanges  : getArrElem(arrChanges  , "not-changed"),
@@ -183,7 +183,7 @@ export default [
 	{
 		name: "lastIndexOf",
 		descr: "Returns the last index of given element or -1.",
-		args        : getArrElem(args        , "(elem, fromIndex)"),
+		args        : getArrElem(args        , "(element, fromIndex)"),
 		returned    : getArrElem(returned    , "index"),
 		callback    : getArrElem(callback    , "none"),
 		arrChanges  : getArrElem(arrChanges  , "not-changed"),
