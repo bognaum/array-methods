@@ -2,6 +2,13 @@ import "./FilteredList.css";
 import MethodDisplayBlock from "./MethodDisplayBlock";
 import arrMethods from "./data/array-methods.js";
 import { useState } from "react";
+import {
+	returned,
+	args,
+	callback,
+	arrChanges,
+	iterFullness,
+} from "./data/value-types.js";
 
 export default function FilteredList() {
 	const 
@@ -12,23 +19,23 @@ export default function FilteredList() {
 			},
 			{
 				title: "Arguments",
-				sort: (a, b) => compare(a.args.name, b.args.name),
+				sort: (a, b) => compare(a.args.name, b.args.name, args),
 			},
 			{
 				title: "Returned value",
-				sort: (a, b) => compare(a.returned.name, b.returned.name),
+				sort: (a, b) => compare(a.returned.name, b.returned.name, returned),
 			},
 			{
 				title: "Array changes",
-				sort: (a, b) => compare(a.arrChanges.name, b.arrChanges.name),
+				sort: (a, b) => compare(a.arrChanges.name, b.arrChanges.name, arrChanges),
 			},
 			{
 				title: "Callback",
-				sort: (a, b) => compare(a.callback.name, b.callback.name),
+				sort: (a, b) => compare(a.callback.name, b.callback.name, callback),
 			},
 			{
 				title: "Iteration fullness",
-				sort: (a, b) => compare(a.iterFullness.name, b.iterFullness.name),
+				sort: (a, b) => compare(a.iterFullness.name, b.iterFullness.name, iterFullness),
 			},
 		],
 		[sortParams, setSortParams] = useState(initSortParams),
@@ -70,6 +77,19 @@ export default function FilteredList() {
 	);
 }
 
-function compare(a ,b) {
-	return a < b ? -1 : a > b ? 1 : 0;
+function compare(a, b, seq=null) {
+	if (seq) {
+		const 
+			ai = seq.findIndex(v => a ===v?.name),
+			bi = seq.findIndex(v => b ===v?.name);
+		if (ai === -1) {
+			console.error(`(!)-USER'S `, `Invalid value to sort \n`, a, "is not found in", seq);
+		}
+		if (bi === -1) {
+			console.error(`(!)-USER'S `, `Invalid value to sort \n`, b, "is not found in", seq);
+		}
+		return ai < bi ? -1 : ai > bi ? 1 : 0;
+	} else {
+		return a < b ? -1 : a > b ? 1 : 0;
+	}
 }
