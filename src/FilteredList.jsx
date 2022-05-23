@@ -5,7 +5,7 @@ import { useState } from "react";
 
 export default function FilteredList() {
 	const 
-		sortParams = [
+		initSortParams = [
 			{
 				title: "alphabet",
 				sort: (a, b) => compare(a.name, b.name),
@@ -31,6 +31,7 @@ export default function FilteredList() {
 				sort: (a, b) => compare(a.iterFullness.name, b.iterFullness.name),
 			},
 		],
+		[sortParams, setSortParams] = useState(initSortParams),
 		[methods, setMethods] = useState(arrMethods)
 
 	return (
@@ -44,8 +45,11 @@ export default function FilteredList() {
 								<button
 								  onClick={
 									  function (ev) {
-										  const sorted = methods.sort(v.sort);
+										  const 
+										  	sorted = methods.sort(v.sort),
+											sParam = sortParams.splice(i, 1);
 										  setMethods([...sorted]);
+										  setSortParams([...sParam, ...sortParams]);
 									  }
 								  }
 								  >{v.title}</button>
