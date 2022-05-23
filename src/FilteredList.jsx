@@ -7,27 +7,27 @@ export default function FilteredList() {
 	const 
 		initSortParams = [
 			{
-				title: "alphabet",
+				title: "Alphabet",
 				sort: (a, b) => compare(a.name, b.name),
 			},
 			{
-				title: "arguments",
+				title: "Arguments",
 				sort: (a, b) => compare(a.args.name, b.args.name),
 			},
 			{
-				title: "returned value",
+				title: "Returned value",
 				sort: (a, b) => compare(a.returned.name, b.returned.name),
 			},
 			{
-				title: "array changes",
+				title: "Array changes",
 				sort: (a, b) => compare(a.arrChanges.name, b.arrChanges.name),
 			},
 			{
-				title: "callback",
+				title: "Callback",
 				sort: (a, b) => compare(a.callback.name, b.callback.name),
 			},
 			{
-				title: "iteration fullness",
+				title: "Iteration fullness",
 				sort: (a, b) => compare(a.iterFullness.name, b.iterFullness.name),
 			},
 		],
