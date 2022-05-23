@@ -1,7 +1,10 @@
 import "./MethodDisplayBlock.css";
 
 export default function MethodDisplayBlock(props) {
-	const mOb = props.methodOb;
+	const 
+		mOb = props.methodOb,
+		baseHref = "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/",
+		href = baseHref+(mOb.hrefPostfix || mOb.name);
 	// console.log(`mOb >>`, mOb);
 	return (
 		<div className="method-display-block">
@@ -55,6 +58,7 @@ export default function MethodDisplayBlock(props) {
 					</tr>
 				</tbody>
 			</table>
+			<div><a href={href} rel="noreferrer" target="_blank">{href}</a></div>
 		</div>
 	);
 }
