@@ -1,3 +1,4 @@
+import "./FilteredList.css";
 import MethodDisplayBlock from "./MethodDisplayBlock";
 import arrMethods from "./data/array-methods.js";
 import { useState } from "react";
@@ -35,18 +36,12 @@ export default function FilteredList() {
 	return (
 		<div className="filtered-list">
 			<h2>Sort by:</h2>
-			<ol style={{
-				display: "inline-block", 
-				position: "sticky", 
-				top: "0",
-				backgroundColor: "#222",
-			}}>
+			<ol>
 				{
 					sortParams.map((v, i) => {
 						return (
 							<li key={i} >
 								<button
-								  style={{width:"100%"}}
 								  onClick={
 									  function (ev) {
 										  const sorted = methods.sort(v.sort);

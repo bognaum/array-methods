@@ -1,0 +1,20 @@
+.filtered-list ol {
+	position: sticky;
+	top: 0;
+	background: #222;
+	counter-reset: nst-1;
+	padding: 10px 0;
+	border-bottom: 1px solid #aaa;
+}
+.filtered-list ol li {
+	counter-increment: nst-1;
+	display: inline-block;
+	white-space: nowrap;
+}
+.filtered-list button {
+	width: 100%;
+}
+.filtered-list button:before {
+	width: 100%;
+	content: counter(nst-1)". ";
+}
