@@ -3,18 +3,20 @@
 	top: 0;
 	background: #222;
 	counter-reset: nst-1;
-	padding: 10px 0;
+	/* padding: 10px 0; */
+	padding: 0;
 	border-bottom: 1px solid #aaa;
 }
 .filtered-list ol li {
 	counter-increment: nst-1;
 	display: inline-block;
 	white-space: nowrap;
+	margin: 10px;
 }
 .filtered-list button {
-	width: 100%;
+	/* width: 100%; */
 }
-.filtered-list button:before {
+.filtered-list li:before {
 	width: 100%;
 	content: counter(nst-1)". ";
 }

@@ -1,0 +1,23 @@
+.filter-menu {
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+}
+.filter-menu__hidden {
+	display: none;
+	position: absolute;
+	background-color: #222;
+	border: 1px solid #aaa;
+	padding: 10px;
+	top: 100%;
+	cursor: auto;
+}
+.filter-menu__option {
+	/*cursor: pointer;*/
+	display: block;
+}
+
+.filter-menu:hover .filter-menu__hidden {
+	display: inline-block;
+
+}

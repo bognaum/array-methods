@@ -1,6 +1,7 @@
 import "./FilteredList.css";
 import MethodDisplayBlock from "./MethodDisplayBlock";
 import arrMethods from "./data/array-methods.js";
+import FilterMenu from "./FilterMenu";
 import { useState } from "react";
 import {
 	returned,
@@ -15,31 +16,37 @@ export default function FilteredList() {
 		initSortParams = [
 			{
 				title: "Alphabet",
-				sort: (a, b) => compare(a.name, b.name),
+				sortCallb: (a, b) => compare(a.name, b.name),
+				filterKeys: [],
 			},
 			{
 				title: "Arguments",
-				sort: (a, b) => compare(a.args.name, b.args.name, args),
+				sortCallb: (a, b) => compare(a.args.name, b.args.name, args),
+				filterKeys: args,
 			},
 			{
 				title: "Returned value",
-				sort: (a, b) => compare(a.returned.name, b.returned.name, returned),
+				sortCallb: (a, b) => compare(a.returned.name, b.returned.name, returned),
+				filterKeys: returned,
 			},
 			{
 				title: "Array changes",
-				sort: (a, b) => compare(a.arrChanges.name, b.arrChanges.name, arrChanges),
+				sortCallb: (a, b) => compare(a.arrChanges.name, b.arrChanges.name, arrChanges),
+				filterKeys: arrChanges,
 			},
 			{
 				title: "Callback",
-				sort: (a, b) => compare(a.callback.name, b.callback.name, callback),
+				sortCallb: (a, b) => compare(a.callback.name, b.callback.name, callback),
+				filterKeys: callback,
 			},
 			{
 				title: "Iteration fullness",
-				sort: (a, b) => compare(a.iterFullness.name, b.iterFullness.name, iterFullness),
+				sortCallb: (a, b) => compare(a.iterFullness.name, b.iterFullness.name, iterFullness),
+				filterKeys: iterFullness,
 			},
 		],
 		[sortParams, setSortParams] = useState(initSortParams),
-		[methods, setMethods] = useState(arrMethods)
+		[methods,    setMethods]    = useState(arrMethods);
 
 	return (
 		<div className="filtered-list">
@@ -48,17 +55,12 @@ export default function FilteredList() {
 				{
 					sortParams.map((v, i) => {
 						return (
-							<li key={i} >
+							<li key={v.title} >
+								<FilterMenu
+									filterKeys={v.filterKeys}
+								></FilterMenu>
 								<button
-								  onClick={
-									  function (ev) {
-										  const 
-										  	sorted = methods.sort(v.sort),
-											sParam = sortParams.splice(i, 1);
-										  setMethods([...sorted]);
-										  setSortParams([...sParam, ...sortParams]);
-									  }
-								  }
+								  onClick={(ev) => sortBy(v)}
 								  >{v.title}</button>
 							</li>
 						);
@@ -75,6 +77,15 @@ export default function FilteredList() {
 			</div>
 		</div>
 	);
+
+	function sortBy(param) {
+		const 
+			index = sortParams.indexOf(param),
+		 	sorted = methods.sort(param.sortCallb),
+			sParam = sortParams.splice(index, 1);
+		setMethods([...sorted]);
+		setSortParams([...sParam, ...sortParams]);
+	}
 }
 
 function compare(a, b, seq=null) {
