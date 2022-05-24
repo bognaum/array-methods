@@ -3,13 +3,14 @@ import MethodDisplayBlock from "./MethodDisplayBlock";
 import arrMethods from "./data/array-methods.js";
 import FilterMenu from "./FilterMenu";
 import { useState } from "react";
-import {
+import valueTypes from "./data/value-types.js";
+const {
 	returned,
 	args,
 	callback,
 	arrChanges,
 	iterFullness,
-} from "./data/value-types.js";
+} = valueTypes;
 
 export default function FilteredList() {
 	const 

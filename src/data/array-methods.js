@@ -1,10 +1,11 @@
-import {
+import valueTypes from "./value-types.js";
+const {
 	returned,
 	args,
 	callback,
 	arrChanges,
 	iterFullness,
-} from "./value-types.js";
+} = valueTypes;
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default [

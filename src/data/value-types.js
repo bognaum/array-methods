@@ -1,5 +1,6 @@
-export const
-	returned =  [
+// eslint-disable-next-line import/no-anonymous-default-export
+export default  {
+	returned :  [
 		{
 			name: "array",
 			descr: "Returns array"
@@ -41,7 +42,7 @@ export const
 			descr: "Returns other"
 		},
 	],
-	args = [
+	args : [
 		{
 			name: "()",
 			descr: "no argumebts",
@@ -103,7 +104,7 @@ export const
 			descr: "",
 		},
 	],
-	callback = [
+	callback : [
 		{
 			name: "(v, i, a) => undefined",
 			descr: [
@@ -154,7 +155,7 @@ export const
 			descr: "No callback",
 		},
 	],
-	arrChanges = [
+	arrChanges : [
 		{
 			name: "changed",
 			descr: "Source array is changed."
@@ -164,7 +165,7 @@ export const
 			descr: "Source array is not changed."
 		},
 	],
-	iterFullness = [
+	iterFullness : [
 		{
 			name: "full",
 			descr: "array iteration always is complete."
@@ -177,4 +178,6 @@ export const
 			name: "no-iter",
 			descr: "No iteration"
 		}
-	];
+	],
+}
+// export default valueTypes;
