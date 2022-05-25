@@ -47,7 +47,7 @@ export default function FilteredList() {
 			},
 		],
 		[sortParams, setSortParams] = useState(initSortParams),
-		[methods,    setMethods]    = useState(arrMethods);
+		[sorted, setSorted] = useState(arrMethods);
 
 	return (
 		<div className="filtered-list">
@@ -70,7 +70,7 @@ export default function FilteredList() {
 			</ol>
 			<div className="methods">
 				{
-					methods.map((v,i) => {
+					sorted.map((v,i) => {
 						return <MethodDisplayBlock key={i} methodOb={v}></MethodDisplayBlock>
 					})
 				}
@@ -82,9 +82,9 @@ export default function FilteredList() {
 	function sortBy(param) {
 		const 
 			index = sortParams.indexOf(param),
-		 	sorted = methods.sort(param.sortCallb),
+		 	newSorted = sorted.sort(param.sortCallb),
 			sParam = sortParams.splice(index, 1);
-		setMethods([...sorted]);
+		setSorted([...newSorted]);
 		setSortParams([...sParam, ...sortParams]);
 	}
 }
