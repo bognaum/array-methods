@@ -10,7 +10,7 @@ const {
 // eslint-disable-next-line import/no-anonymous-default-export
 export default [
 	{
-		name: "[Symbol.iterator]",
+		key: "[Symbol.iterator]",
 		descr: "Returns an iterator object.",
 		hrefPostfix: "@@iterator",
 		args        : getArrElem(args        , "()"),
@@ -20,7 +20,7 @@ export default [
 		iterFullness: getArrElem(iterFullness, "no-iter"),
 	},
 	{
-		name: "at",
+		key: "at",
 		descr: "Returns an element with given index.",
 		args        : getArrElem(args        , "(i)"),
 		returned    : getArrElem(returned    , "element"),
@@ -29,7 +29,7 @@ export default [
 		iterFullness: getArrElem(iterFullness, "no-iter"),
 	},
 	{
-		name: "concat",
+		key: "concat",
 		descr: "Returns new concatenated array from several given arrays.",
 		args        : getArrElem(args        , "(arr1, arr2, ...)"),
 		returned    : getArrElem(returned    , "array"),
@@ -38,7 +38,7 @@ export default [
 		iterFullness: getArrElem(iterFullness, "no-iter"),
 	},
 	{
-		name: "copyWithin",
+		key: "copyWithin",
 		descr: "Copies part of an array to another location in the same array.",
 		args        : getArrElem(args        , "(iTarget, iA, iB)"),
 		returned    : getArrElem(returned    , "array"),
@@ -47,7 +47,7 @@ export default [
 		iterFullness: getArrElem(iterFullness, "no-iter"),
 	},
 	{
-		name: "entries",
+		key: "entries",
 		descr: "Returns a new Array Iterator object that contains the key/value pairs for each index in the array.",
 		args        : getArrElem(args        , "()"),
 		returned    : getArrElem(returned    , "iterator"),
@@ -56,7 +56,7 @@ export default [
 		iterFullness: getArrElem(iterFullness, "no-iter"),
 	},
 	{
-		name: "every",
+		key: "every",
 		descr: "Tests whether all elements pass the test implemented by callback.",
 		args        : getArrElem(args        , "(callb, thisArg)"),
 		returned    : getArrElem(returned    , "boolean"),
@@ -65,7 +65,7 @@ export default [
 		iterFullness: getArrElem(iterFullness, "full"),
 	},
 	{
-		name: "fill",
+		key: "fill",
 		descr: "Fills all or set elements with the set value.",
 		args        : getArrElem(args        , "(v, iA, iB)"),
 		returned    : getArrElem(returned    , "array"),
@@ -74,7 +74,7 @@ export default [
 		iterFullness: getArrElem(iterFullness, "no-iter"),
 	},
 	{
-		name: "filter",
+		key: "filter",
 		descr: "Returns a new array with elements that pass the test implemented by callback.",
 		args        : getArrElem(args        , "(callb, thisArg)"),
 		returned    : getArrElem(returned    , "array"),
@@ -83,7 +83,7 @@ export default [
 		iterFullness: getArrElem(iterFullness, "full"),
 	},
 	{
-		name: "find",
+		key: "find",
 		descr: "Returns the first element that satisfies the provided callback.",
 		args        : getArrElem(args        , "(callb, thisArg)"),
 		returned    : getArrElem(returned    , "element"),
@@ -92,7 +92,7 @@ export default [
 		iterFullness: getArrElem(iterFullness, "not-full"),
 	},
 	{
-		name: "findIndex",
+		key: "findIndex",
 		descr: "Returns the index of element that satisfies the provided callback.",
 		args        : getArrElem(args        , "(callb, thisArg)"),
 		returned    : getArrElem(returned    , "index"),
@@ -101,7 +101,7 @@ export default [
 		iterFullness: getArrElem(iterFullness, "not-full"),
 	},
 	{
-		name: "flat",
+		key: "flat",
 		descr: "Returns a new array with all sub-array elements concatenated into it recursively up to the specified depth.",
 		args        : getArrElem(args        , "(depth)"),
 		returned    : getArrElem(returned    , "array"),
@@ -110,7 +110,7 @@ export default [
 		iterFullness: getArrElem(iterFullness, "no-iter"),
 	},
 	{
-		name: "flatMap",
+		key: "flatMap",
 		descr: "Returns a new flat array formed by applying a given callback.",
 		args        : getArrElem(args        , "(callb, thisArg)"),
 		returned    : getArrElem(returned    , "array"),
@@ -119,7 +119,7 @@ export default [
 		iterFullness: getArrElem(iterFullness, "full"),
 	},
 	{
-		name: "forEach",
+		key: "forEach",
 		descr: "Applies given callback to each array element.",
 		args        : getArrElem(args        , "(callb, thisArg)"),
 		returned    : getArrElem(returned    , "undefined"),
@@ -128,7 +128,7 @@ export default [
 		iterFullness: getArrElem(iterFullness, "full"),
 	},
 	/* {
-		name: "groupBy",
+		key: "groupBy",
 		descr: "Returns",
 		args        : getArrElem(args        , ""),
 		returned    : getArrElem(returned    , ""),
@@ -137,7 +137,7 @@ export default [
 		iterFullness: getArrElem(iterFullness, ""),
 	},
 	{
-		name: "groupByToMap",
+		key: "groupByToMap",
 		descr: "Returns",
 		args        : getArrElem(args        , ""),
 		returned    : getArrElem(returned    , ""),
@@ -146,7 +146,7 @@ export default [
 		iterFullness: getArrElem(iterFullness, ""),
 	}, */
 	{
-		name: "includes",
+		key: "includes",
 		descr: "Returns boolean sign of including given element in array.",
 		args        : getArrElem(args        , "(element, fromIndex)"),
 		returned    : getArrElem(returned    , "boolean"),
@@ -155,7 +155,7 @@ export default [
 		iterFullness: getArrElem(iterFullness, "no-iter"),
 	},
 	{
-		name: "indexOf",
+		key: "indexOf",
 		descr: "Returns the first index of given element or -1.",
 		args        : getArrElem(args        , "(element, fromIndex)"),
 		returned    : getArrElem(returned    , "index"),
@@ -164,7 +164,7 @@ export default [
 		iterFullness: getArrElem(iterFullness, "not-full"),
 	},
 	{
-		name: "join",
+		key: "join",
 		descr: "Returns a string joined from array through given string",
 		args        : getArrElem(args        , "(string)"),
 		returned    : getArrElem(returned    , "string"),
@@ -173,7 +173,7 @@ export default [
 		iterFullness: getArrElem(iterFullness, "no-iter"),
 	},
 	{
-		name: "keys",
+		key: "keys",
 		descr: "Returns an iterator object by keys.",
 		args        : getArrElem(args        , "()"),
 		returned    : getArrElem(returned    , "iterator"),
@@ -182,7 +182,7 @@ export default [
 		iterFullness: getArrElem(iterFullness, "no-iter"),
 	},
 	{
-		name: "lastIndexOf",
+		key: "lastIndexOf",
 		descr: "Returns the last index of given element or -1.",
 		args        : getArrElem(args        , "(element, fromIndex)"),
 		returned    : getArrElem(returned    , "index"),
@@ -191,7 +191,7 @@ export default [
 		iterFullness: getArrElem(iterFullness, "no-iter"),
 	},
 	{
-		name: "map",
+		key: "map",
 		descr: "Returns a new array populated with the results of calling a provided callback on every element.",
 		args        : getArrElem(args        , "(callb, thisArg)"),
 		returned    : getArrElem(returned    , "array"),
@@ -200,7 +200,7 @@ export default [
 		iterFullness: getArrElem(iterFullness, "full"),
 	},
 	{
-		name: "pop",
+		key: "pop",
 		descr: "Deleted and returns a last element of array.",
 		args        : getArrElem(args        , "()"),
 		returned    : getArrElem(returned    , "element"),
@@ -209,7 +209,7 @@ export default [
 		iterFullness: getArrElem(iterFullness, "no-iter"),
 	},
 	{
-		name: "push",
+		key: "push",
 		descr: "Adds one or more elements to the end of array, and returns new array length.",
 		args        : getArrElem(args        , "(element, ...)"),
 		returned    : getArrElem(returned    , "length"),
@@ -218,7 +218,7 @@ export default [
 		iterFullness: getArrElem(iterFullness, "no-iter"),
 	},
 	{
-		name: "reduce",
+		key: "reduce",
 		descr: "Returns Hash received by sequential processing of array elements with given callback.",
 		args        : getArrElem(args        , "(callb, accum)"),
 		returned    : getArrElem(returned    , "hash"),
@@ -227,7 +227,7 @@ export default [
 		iterFullness: getArrElem(iterFullness, "full"),
 	},
 	{
-		name: "reduceRight",
+		key: "reduceRight",
 		descr: "Returns Hash received by sequential processing of array elements with given callback in backward sequence.",
 		args        : getArrElem(args        , "(callb, accum)"),
 		returned    : getArrElem(returned    , "hash"),
@@ -236,7 +236,7 @@ export default [
 		iterFullness: getArrElem(iterFullness, "full"),
 	},
 	{
-		name: "reverse",
+		key: "reverse",
 		descr: "Reverses the array and returns it.",
 		args        : getArrElem(args        , "()"),
 		returned    : getArrElem(returned    , "array"),
@@ -245,7 +245,7 @@ export default [
 		iterFullness: getArrElem(iterFullness, "no-iter"),
 	},
 	{
-		name: "shift",
+		key: "shift",
 		descr: "Deleted and returns a first element of array.",
 		args        : getArrElem(args        , "()"),
 		returned    : getArrElem(returned    , "element"),
@@ -254,7 +254,7 @@ export default [
 		iterFullness: getArrElem(iterFullness, "no-iter"),
 	},
 	{
-		name: "slice",
+		key: "slice",
 		descr: "Returns an array with sliced elements. Еру logic is similarly to logic of string.slice().",
 		args        : getArrElem(args        , "(beginIndex, endIndex)"),
 		returned    : getArrElem(returned    , "array"),
@@ -263,7 +263,7 @@ export default [
 		iterFullness: getArrElem(iterFullness, "no-iter"),
 	},
 	{
-		name: "some",
+		key: "some",
 		descr: "Tests whether some one element satisfies the provided callback.",
 		args        : getArrElem(args        , "(callb, thisArg)"),
 		returned    : getArrElem(returned    , "boolean"),
@@ -272,7 +272,7 @@ export default [
 		iterFullness: getArrElem(iterFullness, "no-iter"),
 	},
 	{
-		name: "sort",
+		key: "sort",
 		descr: "Sorts the array and returns it.",
 		args        : getArrElem(args        , "(callb)"),
 		returned    : getArrElem(returned    , "array"),
@@ -281,7 +281,7 @@ export default [
 		iterFullness: getArrElem(iterFullness, "not-full"),
 	},
 	{
-		name: "splice",
+		key: "splice",
 		descr: "Returns array of deleted elements from given position, and added to this position other given elements.",
 		args        : getArrElem(args        , "(begin, delCount, added1, ...)"),
 		returned    : getArrElem(returned    , "array"),
@@ -290,7 +290,7 @@ export default [
 		iterFullness: getArrElem(iterFullness, "no-iter"),
 	},
 	{
-		name: "toLocaleString",
+		key: "toLocaleString",
 		descr: "Returns a string representation of array.",
 		args        : getArrElem(args        , "(locales, options)"),
 		returned    : getArrElem(returned    , "string"),
@@ -299,7 +299,7 @@ export default [
 		iterFullness: getArrElem(iterFullness, "no-iter"),
 	},
 	{
-		name: "toString",
+		key: "toString",
 		descr: "Returns a string representation of array.",
 		args        : getArrElem(args        , "()"),
 		returned    : getArrElem(returned    , "string"),
@@ -308,7 +308,7 @@ export default [
 		iterFullness: getArrElem(iterFullness, "no-iter"),
 	},
 	{
-		name: "unshift",
+		key: "unshift",
 		descr: "Adds one or more elements to the begin of array, and returns new array length.",
 		args        : getArrElem(args        , "(element, ...)"),
 		returned    : getArrElem(returned    , "length"),
@@ -317,7 +317,7 @@ export default [
 		iterFullness: getArrElem(iterFullness, "no-iter"),
 	},
 	{
-		name: "values",
+		key: "values",
 		descr: "Returns an iterator object by values of elements.",
 		args        : getArrElem(args        , "()"),
 		returned    : getArrElem(returned    , "iterator"),
@@ -327,13 +327,13 @@ export default [
 	},
 ];
 
-function getArrElem(arr, name) {
-	const i = arr.findIndex(v => v.name === name);
+function getArrElem(arr, key) {
+	const i = arr.findIndex(v => v.key === key);
 	if (0 <= i) {
 		return arr[i];
 		// return i;
 	} else {
-		console.error(`(!)-USER'S `, `invalid name \n`, name, `\n in`, arr);
-		throw new Error(`invalid name ${name}`)
+		console.error(`(!)-USER'S `, `invalid key \n`, key, `\n in`, arr);
+		throw new Error(`invalid key ${key}`)
 	}
 }

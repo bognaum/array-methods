@@ -17,32 +17,32 @@ export default function FilteredList() {
 		initSortParams = [
 			{
 				title: "Alphabet",
-				sortCallb: (a, b) => compare(a.name, b.name),
+				sortCallb: (a, b) => compare(a.key, b.key),
 				filterKeys: [],
 			},
 			{
 				title: "Arguments",
-				sortCallb: (a, b) => compare(a.args.name, b.args.name, args),
+				sortCallb: (a, b) => compare(a.args.key, b.args.key, args),
 				filterKeys: args,
 			},
 			{
 				title: "Returned value",
-				sortCallb: (a, b) => compare(a.returned.name, b.returned.name, returned),
+				sortCallb: (a, b) => compare(a.returned.key, b.returned.key, returned),
 				filterKeys: returned,
 			},
 			{
 				title: "Array changes",
-				sortCallb: (a, b) => compare(a.arrChanges.name, b.arrChanges.name, arrChanges),
+				sortCallb: (a, b) => compare(a.arrChanges.key, b.arrChanges.key, arrChanges),
 				filterKeys: arrChanges,
 			},
 			{
 				title: "Callback",
-				sortCallb: (a, b) => compare(a.callback.name, b.callback.name, callback),
+				sortCallb: (a, b) => compare(a.callback.key, b.callback.key, callback),
 				filterKeys: callback,
 			},
 			{
 				title: "Iteration fullness",
-				sortCallb: (a, b) => compare(a.iterFullness.name, b.iterFullness.name, iterFullness),
+				sortCallb: (a, b) => compare(a.iterFullness.key, b.iterFullness.key, iterFullness),
 				filterKeys: iterFullness,
 			},
 		],
@@ -92,8 +92,8 @@ export default function FilteredList() {
 function compare(a, b, seq=null) {
 	if (seq) {
 		const 
-			ai = seq.findIndex(v => a ===v?.name),
-			bi = seq.findIndex(v => b ===v?.name);
+			ai = seq.findIndex(v => a ===v?.key),
+			bi = seq.findIndex(v => b ===v?.key);
 		if (ai === -1) {
 			console.error(`(!)-USER'S `, `Invalid value to sort \n`, a, "is not found in", seq);
 		}

@@ -2,111 +2,111 @@
 export default  {
 	returned :  [
 		{
-			name: "array",
+			key: "array",
 			descr: "Returns array"
 		},
 		{
-			name: "iterator",
+			key: "iterator",
 			descr: "Returns iterator"
 		},
 		{
-			name: "length",
+			key: "length",
 			descr: "Returns length"
 		},
 		{
-			name: "element",
+			key: "element",
 			descr: "Returns element"
 		},
 		{
-			name: "index",
+			key: "index",
 			descr: "Returns index"
 		},
 		{
-			name: "hash",
+			key: "hash",
 			descr: "Returns hash"
 		},
 		{
-			name: "string",
+			key: "string",
 			descr: "Returns string"
 		},
 		{
-			name: "boolean",
+			key: "boolean",
 			descr: "Returns boolean"
 		},
 		{
-			name: "undefined",
+			key: "undefined",
 			descr: "Returns undefined"
 		},
 		{
-			name: "other",
+			key: "other",
 			descr: "Returns other"
 		},
 	],
 	args : [
 		{
-			name: "()",
+			key: "()",
 			descr: "no argumebts",
 		},
 		{
-			name: "(i)",
+			key: "(i)",
 			descr: "index",
 		},
 		{
-			name: "(depth)",
+			key: "(depth)",
 			descr: "depth",
 		},
 		{
-			name: "(string)",
+			key: "(string)",
 			descr: "string",
 		},
 		{
-			name: "(element, ...)",
+			key: "(element, ...)",
 			descr: "one or many elements",
 		},
 		{
-			name: "(element, fromIndex)",
+			key: "(element, fromIndex)",
 			descr: "elem - value of element \nfromIndex - check from this index",
 		},
 		{
-			name: "(v, iA, iB)",
+			key: "(v, iA, iB)",
 			descr: "v - filling value \niA - from index \niB - to index",
 		},
 		{
-			name: "(iTarget, iA, iB)",
+			key: "(iTarget, iA, iB)",
 			descr: "iTarget - index of target element \niA - from index \niB - to index",
 		},
 		{
-			name: "(beginIndex, endIndex)",
+			key: "(beginIndex, endIndex)",
 			descr: "beginIndex - index of begin \nendIndex - index of end",
 		},
 		{
-			name: "(callb)",
+			key: "(callb)",
 			descr: "callback",
 		},
 		{
-			name: "(callb, thisArg)",
+			key: "(callb, thisArg)",
 			descr: "callb - callback \nthisArg - value of 'this' (optional)",
 		},
 		{
-			name: "(callb, accum)",
+			key: "(callb, accum)",
 			descr: "callb - callback \naccum - accumulator - initial value to first call of callback",
 		},
 		{
-			name: "(arr1, arr2, ...)",
+			key: "(arr1, arr2, ...)",
 			descr: "two or many arrays",
 		},
 		{
-			name: "(begin, delCount, added1, ...)",
+			key: "(begin, delCount, added1, ...)",
 			descr: "begin - index of begin \ndelCount - how many elements \n added1 - added element",
 		},
 		{
-			name: "(locales, options)",
+			key: "(locales, options)",
 			descr: "",
 		},
 	],
 	callback : [
 		{
-			name: "(v, i, a) => undefined",
+			key: "(v, i, a) => undefined",
 			descr: [
 				"v - value",
 				"i - index",
@@ -115,7 +115,7 @@ export default  {
 			].join("\n"),
 		},
 		{
-			name: "(v, i, a) => v",
+			key: "(v, i, a) => v",
 			descr: [
 				"v - value",
 				"i - index",
@@ -124,7 +124,7 @@ export default  {
 			].join("\n"),
 		},
 		{
-			name: "(v, i, a) => true/false",
+			key: "(v, i, a) => true/false",
 			descr: [
 				"v - value",
 				"i - index",
@@ -133,7 +133,7 @@ export default  {
 			].join("\n"),
 		},
 		{
-			name: "(acc, v, i, a) => acc",
+			key: "(acc, v, i, a) => acc",
 			descr: [
 				"acc - accumulator",
 				"  v - value",
@@ -143,7 +143,7 @@ export default  {
 			].join("\n"),
 		},
 		{
-			name: "(a, b) => -1|0|1",
+			key: "(a, b) => -1|0|1",
 			descr: [
 				"a - compared value",
 				"b - compared value",
@@ -151,31 +151,31 @@ export default  {
 			].join("\n"),
 		},
 		{
-			name: "none",
+			key: "none",
 			descr: "No callback",
 		},
 	],
 	arrChanges : [
 		{
-			name: "changed",
+			key: "changed",
 			descr: "Source array is changed."
 		},
 		{
-			name: "not-changed",
+			key: "not-changed",
 			descr: "Source array is not changed."
 		},
 	],
 	iterFullness : [
 		{
-			name: "full",
+			key: "full",
 			descr: "array iteration always is complete."
 		},
 		{
-			name: "not-full",
+			key: "not-full",
 			descr: "Array iteration is incomplete."
 		},
 		{
-			name: "no-iter",
+			key: "no-iter",
 			descr: "No iteration"
 		}
 	],

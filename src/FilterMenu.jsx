@@ -34,7 +34,7 @@ export default function FilterMenu(props) {
 								}}
 							  
 						/>
-							{v.name}
+							{v.key}
 						</label>
 					);
 				})}
