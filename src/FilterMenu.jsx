@@ -2,11 +2,7 @@ import { useState } from "react";
 import "./FilterMenu.css"
 
 export default function FilterMenu(props) {
-	const 
-		len = props.filterKeys.length,
-		[allCheckState, setAllCheckState] = useState(true),
-		[checkeds, setCheckeds] = useState(new Array(len).fill(true));
-	// console.log(`checkeds >>`, checkeds);
+	const [allCheckState, setAllCheckState] = useState(true);
 	return (
 		<div className="filter-menu">
 			<div className="filter-menu__hidden">
@@ -15,8 +11,10 @@ export default function FilterMenu(props) {
 						type="checkbox" 
 						checked={allCheckState} 
 						onChange={() => {
-							setAllCheckState(!allCheckState);
-							setCheckeds(new Array(len).fill(!allCheckState));
+							const status = !allCheckState;
+							setAllCheckState(status);
+							props.filterKeys.forEach(v => v.checked = status);
+							props.rerenderList();
 						}}
 					/>
 					all
@@ -27,10 +25,10 @@ export default function FilterMenu(props) {
 						<label className="filter-menu__option" key={i}>
 							<input
 								type="checkbox"
-								checked={checkeds[i]} 
+								checked={v.checked} 
 								onChange={() => {
-									checkeds[i] = !checkeds[i];
-									setCheckeds([...checkeds]);
+									v.checked = !v.checked;
+									props.rerenderList();
 								}}
 							  
 						/>

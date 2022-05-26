@@ -12,6 +12,12 @@ const {
 	iterFullness,
 } = valueTypes;
 
+for (const i in valueTypes) {
+	for (const v of valueTypes[i]) {
+		v.checked = true;
+	}
+}
+
 export default function FilteredList() {
 	const 
 		initSortParams = [
@@ -47,7 +53,9 @@ export default function FilteredList() {
 			},
 		],
 		[sortParams, setSortParams] = useState(initSortParams),
-		[sorted, setSorted] = useState(arrMethods);
+		[sorted, setSorted] = useState(arrMethods),
+		filtered = filter(sorted);
+	console.log(`sortParams >>`, sortParams);
 
 	return (
 		<div className="filtered-list">
@@ -59,6 +67,7 @@ export default function FilteredList() {
 							<li key={v.title} >
 								<FilterMenu
 									filterKeys={v.filterKeys}
+									rerenderList={rerenderList}
 								></FilterMenu>
 								<button
 								  onClick={(ev) => sortBy(v)}
@@ -70,7 +79,7 @@ export default function FilteredList() {
 			</ol>
 			<div className="methods">
 				{
-					sorted.map((v,i) => {
+					filtered.map((v,i) => {
 						return <MethodDisplayBlock key={i} methodOb={v}></MethodDisplayBlock>
 					})
 				}
@@ -78,6 +87,27 @@ export default function FilteredList() {
 			</div>
 		</div>
 	);
+
+	function rerenderList() {
+		setSortParams([...sortParams]);
+	}
+
+	function filter(methods) {
+		const res = [];
+		for (const method of methods) {
+			let flag = true;
+			for (const vTName in valueTypes) {
+				if (!method[vTName].checked) {
+					flag = false;
+					break;
+				}
+			}
+			if (flag) {
+				res.push(method);
+			}
+		}
+		return res;
+	}
 
 	function sortBy(param) {
 		const 
