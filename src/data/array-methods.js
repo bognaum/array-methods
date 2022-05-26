@@ -161,7 +161,7 @@ export default [
 		returned    : getArrElem(returned    , "index"),
 		callback    : getArrElem(callback    , "none"),
 		arrChanges  : getArrElem(arrChanges  , "not-changed"),
-		iterFullness: getArrElem(iterFullness, "not-full"),
+		iterFullness: getArrElem(iterFullness, "no-iter"),
 	},
 	{
 		key: "join",
