@@ -78,6 +78,7 @@ export default function FilteredList() {
 				}
 			</ol>
 			<div className="methods">
+				<p>{filtered.length} methods found.</p>
 				{
 					filtered.map((v,i) => {
 						return <MethodDisplayBlock key={i} methodOb={v}></MethodDisplayBlock>
