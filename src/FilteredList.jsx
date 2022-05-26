@@ -81,7 +81,9 @@ export default function FilteredList() {
 				<p>{filtered.length} methods found.</p>
 				{
 					filtered.map((v,i) => {
-						return <MethodDisplayBlock key={i} methodOb={v}></MethodDisplayBlock>
+						return (
+							<MethodDisplayBlock key={i} methodOb={v}></MethodDisplayBlock>
+						);
 					})
 				}
 				
