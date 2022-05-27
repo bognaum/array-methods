@@ -26,12 +26,7 @@ export default function FilterMenu(props) {
 							props.rerenderList();
 						}}
 					/>
-					<span
-						className={
-							"checkbox-icon "+
-							(allCheckState ? "icon-checked" : "icon-unchecked")
-						}
-					></span>
+					{menuSign}
 					&nbsp;&nbsp;
 					all
 				</label>
