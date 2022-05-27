@@ -17,9 +17,6 @@
 	/* border: 1px solid #aaa; */
 	padding: 5px;
 }
-.filtered-list button {
-	/* width: 100%; */
-}
 .filtered-list li:before {
 	width: 100%;
 	content: counter(nst-1)". ";
