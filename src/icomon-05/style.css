@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomon-1';
-  src:  url('fonts/icomon-1.eot?uq0rcy');
-  src:  url('fonts/icomon-1.eot?uq0rcy#iefix') format('embedded-opentype'),
-    url('fonts/icomon-1.ttf?uq0rcy') format('truetype'),
-    url('fonts/icomon-1.woff?uq0rcy') format('woff'),
-    url('fonts/icomon-1.svg?uq0rcy#icomon-1') format('svg');
+  src:  url('fonts/icomon-1.eot?4tnga7');
+  src:  url('fonts/icomon-1.eot?4tnga7#iefix') format('embedded-opentype'),
+    url('fonts/icomon-1.ttf?4tnga7') format('truetype'),
+    url('fonts/icomon-1.woff?4tnga7') format('woff'),
+    url('fonts/icomon-1.svg?4tnga7#icomon-1') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -36,6 +36,42 @@
 }
 .icon-sort-7:before {
   content: "\e910";
+}
+.icon-invert-checks-2:before {
+  content: "\e90c";
+}
+.icon-invert-checks-6:before {
+  content: "\e912";
+}
+.icon-invert-checks-7:before {
+  content: "\e92c";
+}
+.icon-invert-checks-11:before {
+  content: "\e92d";
+}
+.icon-invert-checks-10:before {
+  content: "\e92e";
+}
+.icon-invert-checks-1:before {
+  content: "\e92f";
+}
+.icon-invert-checks-3:before {
+  content: "\e930";
+}
+.icon-invert-checks-4:before {
+  content: "\e931";
+}
+.icon-invert-checks-8:before {
+  content: "\e933";
+}
+.icon-invert-checks-9:before {
+  content: "\e934";
+}
+.icon-invert-checks-12:before {
+  content: "\e935";
+}
+.icon-invert-checks-13:before {
+  content: "\e936";
 }
 .icon-sort-02-2:before {
   content: "\e923";

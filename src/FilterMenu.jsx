@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./FilterMenu.css"
-import "./icomon-03/style.css";
+import "./icomon-05/style.css";
 
 export default function FilterMenu(props) {
 	const [allCheckState, setAllCheckState] = useState(true);
@@ -29,6 +29,20 @@ export default function FilterMenu(props) {
 					{menuSign}
 					&nbsp;&nbsp;
 					all
+				</label>
+				<label className="filter-menu__option">
+					<input 
+						type="checkbox" 
+						hidden
+						checked={allCheckState} 
+						onChange={() => {
+							props.filterKeys.forEach(v => v.checked = !v.checked);
+							props.rerenderList();
+						}}
+					/>
+					<span className="font-icon icon-invert-checks-1"></span>
+					&nbsp;&nbsp;
+					invert checks
 				</label>
 				<hr />
 				{props.filterKeys.map((v, i) => {
