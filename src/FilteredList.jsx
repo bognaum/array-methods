@@ -25,7 +25,6 @@ export default function FilteredList() {
 			{
 				title: "Alphabet",
 				sortCallb: (a, b) => compare(a.key, b.key),
-				filterKeys: [],
 			},
 			{
 				title: "Arguments",
@@ -72,10 +71,15 @@ export default function FilteredList() {
 									onClick={(ev) => sortBy(v)}
 									title={"Sort by "+v.title}
 								></span>
-								<FilterMenu
-									filterKeys={v.filterKeys}
-									rerenderList={rerenderList}
-								></FilterMenu>
+								{
+									v.filterKeys ? 
+										<FilterMenu
+											filterKeys={v.filterKeys}
+											rerenderList={rerenderList}
+										></FilterMenu>
+									: 
+										null
+								}
 							</li>
 						);
 					})
