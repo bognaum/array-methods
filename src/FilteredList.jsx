@@ -55,7 +55,6 @@ export default function FilteredList() {
 		[sortParams, setSortParams] = useState(initSortParams),
 		[sorted, setSorted] = useState(arrMethods),
 		filtered = filter(sorted);
-	console.log(`sortParams >>`, sortParams);
 
 	return (
 		<div className="filtered-list">
