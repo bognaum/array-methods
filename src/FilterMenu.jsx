@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./FilterMenu.css"
-import "./icomon-02/style.css";
+import "./icomon-03/style.css";
 
 export default function FilterMenu(props) {
 	const [allCheckState, setAllCheckState] = useState(true);

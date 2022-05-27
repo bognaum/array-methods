@@ -1,4 +1,5 @@
 import "./FilteredList.css";
+import "./icomon-03/style.css";
 import MethodDisplayBlock from "./MethodDisplayBlock";
 import arrMethods from "./data/array-methods.js";
 import FilterMenu from "./FilterMenu";
@@ -64,14 +65,17 @@ export default function FilteredList() {
 				{
 					sortParams.map((v, i) => {
 						return (
-							<li key={v.title} >
+							<li key={v.title} className="filtered-list__menu-point" >
+								{v.title} <br />
+								<span 
+									className="checkbox-icon icon-sort-7"
+									onClick={(ev) => sortBy(v)}
+									title={"Sort by "+v.title}
+								></span>
 								<FilterMenu
 									filterKeys={v.filterKeys}
 									rerenderList={rerenderList}
 								></FilterMenu>
-								<button
-								  onClick={(ev) => sortBy(v)}
-								  >{v.title}</button>
 							</li>
 						);
 					})

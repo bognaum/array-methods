@@ -2,6 +2,7 @@
 	display: inline-block;
 	cursor: pointer;
 	position: relative;
+	text-align: left;
 }
 .filter-menu__hidden {
 	display: none;

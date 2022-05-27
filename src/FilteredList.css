@@ -6,12 +6,16 @@
 	/* padding: 10px 0; */
 	padding: 0;
 	border-bottom: 1px solid #aaa;
+	/* text-align: center; */
 }
 .filtered-list ol li {
 	counter-increment: nst-1;
 	display: inline-block;
 	white-space: nowrap;
-	margin: 10px;
+	margin: 5px;
+	text-align: center;
+	/* border: 1px solid #aaa; */
+	padding: 5px;
 }
 .filtered-list button {
 	/* width: 100%; */
