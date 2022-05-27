@@ -84,9 +84,12 @@ export default function FilteredList() {
 						);
 					})
 				}
+				<div className="bottom-border">
+					<div className="bottom-border__title">{filtered.length} methods found.</div>
+					<div className="bottom-border__border"></div>
+				</div>
 			</ol>
 			<div className="methods">
-				<p>{filtered.length} methods found.</p>
 				{
 					filtered.map((v,i) => {
 						return (

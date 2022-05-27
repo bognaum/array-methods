@@ -3,10 +3,8 @@
 	top: 0;
 	background: #222;
 	counter-reset: nst-1;
-	/* padding: 10px 0; */
 	padding: 0;
-	border-bottom: 1px solid #aaa;
-	/* text-align: center; */
+	/* border-bottom: 1px solid #aaa; */
 }
 .filtered-list ol li {
 	counter-increment: nst-1;
@@ -20,4 +18,12 @@
 .filtered-list li:before {
 	width: 100%;
 	content: counter(nst-1)". ";
+}
+.bottom-border {
+	display: flex;
+}
+.bottom-border__border {
+	border-bottom: 2px solid #aaa;
+	flex: auto;
+	margin: 8px;
 }
