@@ -269,7 +269,7 @@ export default [
 		returned    : getArrElem(returned    , "boolean"),
 		callback    : getArrElem(callback    , "(v, i, a) => true/false"),
 		arrChanges  : getArrElem(arrChanges  , "not-changed"),
-		iterFullness: getArrElem(iterFullness, "no-iter"),
+		iterFullness: getArrElem(iterFullness, "not-full"),
 	},
 	{
 		key: "sort",
