@@ -45,10 +45,10 @@ export default  {
 	args : [
 		{
 			key: "()",
-			descr: "no argumebts",
+			descr: "no arguments",
 		},
 		{
-			key: "(i)",
+			key: "(index)",
 			descr: "index",
 		},
 		{
@@ -60,7 +60,7 @@ export default  {
 			descr: "string",
 		},
 		{
-			key: "(element, ...)",
+			key: "(element1, element2 ...)",
 			descr: "one or many elements",
 		},
 		{
@@ -161,7 +161,7 @@ export default  {
 			descr: "Source array is changed."
 		},
 		{
-			key: "not-changed",
+			key: "not changed",
 			descr: "Source array is not changed."
 		},
 	],
@@ -171,11 +171,11 @@ export default  {
 			descr: "array iteration always is complete."
 		},
 		{
-			key: "not-full",
+			key: "not full",
 			descr: "Array iteration is incomplete."
 		},
 		{
-			key: "no-iter",
+			key: "no callback",
 			descr: "No iteration"
 		}
 	],
