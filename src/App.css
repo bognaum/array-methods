@@ -9,3 +9,6 @@
 	margin-bottom: .1em;
 	vertical-align: middle;
 }
+.font-icon:hover {
+	color: #ccc;
+}

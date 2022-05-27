@@ -22,4 +22,6 @@
 	display: inline-block;
 }
 
+label.filter-menu__option:hover .font-icon{
+	color: #ccc;
 }
