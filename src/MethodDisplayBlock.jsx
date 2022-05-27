@@ -28,21 +28,11 @@ export default function MethodDisplayBlock(props) {
 					<tr>
 						<td>
 							<div className="method-display-block__prop-name">
-								returned
+								Returns
 							</div>
 							<div className="method-display-block__prop-value">
 								{mOb.returned.key}
 							</div>
-						</td>
-						<td>
-							<div className="method-display-block__prop-name">
-								callback
-							</div>
-							<div
-							  className="method-display-block__prop-value"
-							  title={mOb.callback.descr}>
-							  {mOb.callback.key}
-							  </div>
 						</td>
 						<td>
 							<div className="method-display-block__prop-name">
@@ -54,7 +44,17 @@ export default function MethodDisplayBlock(props) {
 						</td>
 						<td>
 							<div className="method-display-block__prop-name">
-								fullness of iteration
+								Callback
+							</div>
+							<div
+							  className="method-display-block__prop-value"
+							  title={mOb.callback.descr}>
+							  {mOb.callback.key}
+							  </div>
+						</td>
+						<td>
+							<div className="method-display-block__prop-name">
+								Fullness of callback iteration
 							</div>
 							<div className="method-display-block__prop-value">
 								{mOb.iterFullness.key}

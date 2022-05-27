@@ -47,7 +47,7 @@ export default function FilteredList() {
 				filterKeys: callback,
 			},
 			{
-				title: "Iteration fullness",
+				title: "Callback iteration fullness",
 				sortCallb: (a, b) => compare(a.iterFullness.key, b.iterFullness.key, iterFullness),
 				filterKeys: iterFullness,
 			},
