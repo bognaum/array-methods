@@ -44,7 +44,7 @@ export default function FilterMenu(props) {
 					&nbsp;&nbsp;
 					invert checks
 				</label>
-				<hr />
+				<div style={{borderBottom: "1px solid #aaa", margin: ".5em 0"}}></div>
 				{props.filterKeys.map((v, i) => {
 					return (
 						<label className="filter-menu__option" key={i}>
