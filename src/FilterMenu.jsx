@@ -7,9 +7,9 @@ export default function FilterMenu(props) {
 	const 
 		cb = (v) => v.checked,
 		menuSign = 
-			props.filterKeys.every(cb)? <span className="checkbox-icon icon-checked"></span> :
-			props.filterKeys.some(cb)? <span className="checkbox-icon icon-filter-5"></span> :
-			<span className="checkbox-icon icon-unchecked"></span>;
+			props.filterKeys.every(cb)? <span className="font-icon icon-checked"></span> :
+			props.filterKeys.some(cb)? <span className="font-icon icon-filter-5"></span> :
+			<span className="font-icon icon-unchecked"></span>;
 
 	return (
 		<div className="filter-menu">
@@ -46,7 +46,7 @@ export default function FilterMenu(props) {
 							/>
 							<span
 								className={
-									"checkbox-icon "+
+									"font-icon "+
 									(v.checked ? "icon-checked" : "icon-unchecked")
 								}
 							></span>

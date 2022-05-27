@@ -68,7 +68,7 @@ export default function FilteredList() {
 							<li key={v.title} className="filtered-list__menu-point" >
 								{v.title} <br />
 								<span 
-									className="checkbox-icon icon-sort-7"
+									className="font-icon icon-sort-7"
 									onClick={(ev) => sortBy(v)}
 									title={"Sort by "+v.title}
 								></span>
