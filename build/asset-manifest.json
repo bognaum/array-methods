@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "./static/css/main.8b742ec7.css",
-    "main.js": "./static/js/main.78a3f913.js",
+    "main.css": "./static/css/main.515b7af6.css",
+    "main.js": "./static/js/main.8acbe8c4.js",
     "static/js/787.57cf5eaa.chunk.js": "./static/js/787.57cf5eaa.chunk.js",
-    "static/media/icomon-1.svg?8sfim9": "./static/media/icomon-1.9b69461512c830fdec91.svg",
-    "static/media/icomon-1.eot?8sfim9": "./static/media/icomon-1.2589d1015d92299e03d6.eot",
-    "static/media/icomon-1.woff?8sfim9": "./static/media/icomon-1.5e3a4e60046323594687.woff",
-    "static/media/icomon-1.ttf?8sfim9": "./static/media/icomon-1.551dca19ed5f620082b1.ttf",
+    "static/media/icomon-07.svg?2evu8z": "./static/media/icomon-07.1191dd06155bca73eddc.svg",
+    "static/media/icomon-07.eot?2evu8z": "./static/media/icomon-07.4a78c2b8949cfaef4c76.eot",
+    "static/media/icomon-07.woff?2evu8z": "./static/media/icomon-07.3d3fc1500e8ef647c8fb.woff",
+    "static/media/icomon-07.ttf?2evu8z": "./static/media/icomon-07.7f7d1ecf91c978890755.ttf",
     "index.html": "./index.html",
-    "main.8b742ec7.css.map": "./static/css/main.8b742ec7.css.map",
-    "main.78a3f913.js.map": "./static/js/main.78a3f913.js.map",
+    "main.515b7af6.css.map": "./static/css/main.515b7af6.css.map",
+    "main.8acbe8c4.js.map": "./static/js/main.8acbe8c4.js.map",
     "787.57cf5eaa.chunk.js.map": "./static/js/787.57cf5eaa.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8b742ec7.css",
-    "static/js/main.78a3f913.js"
+    "static/css/main.515b7af6.css",
+    "static/js/main.8acbe8c4.js"
   ]
 }
