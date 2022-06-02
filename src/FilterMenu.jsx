@@ -1,5 +1,5 @@
 import "./FilterMenu.css"
-import "./icomon-06/style.css";
+import "./icomon-08/style.css";
 
 export default function FilterMenu(props) {
 	const 
@@ -34,7 +34,7 @@ export default function FilterMenu(props) {
 							props.rerenderList();
 						}}
 					/>
-					<span className="font-icon icon-invert-checks-1"></span>
+					<span className="font-icon icon-invert-checks-17"></span>
 					&nbsp;&nbsp;
 					invert checks
 				</label>

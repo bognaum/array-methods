@@ -1,5 +1,5 @@
 import "./FilteredList.css";
-import "./icomon-06/style.css";
+import "./icomon-08/style.css";
 import MethodDisplayBlock from "./MethodDisplayBlock";
 import arrMethods from "./data/array-methods.js";
 import FilterMenu from "./FilterMenu";
